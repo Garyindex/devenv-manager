@@ -76,4 +76,6 @@ jobs:
         run: |
           $version = (Get-Content package.json | ConvertFrom-Json).version
           $assetName = "devenv-manager_${version}_x64-portable.exe"
-          gh release upload "v$version" "src-tauri/target/release/devenv-manager.exe#$assetName" --clobber
+          $portablePath = "src-tauri/target/release/$assetName"
+          Copy-Item -LiteralPath "src-tauri/target/release/devenv-manager.exe" -Destination $portablePath -Force
+          gh release upload "v$version" $portablePath --clobber
