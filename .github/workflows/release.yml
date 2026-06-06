@@ -66,15 +66,14 @@ jobs:
 
       - name: Build Windows portable executable
         if: matrix.platform == 'windows-latest'
-        uses: tauri-apps/tauri-action@v0
+        run: npm run tauri build -- --no-bundle
+
+      - name: Upload Windows portable executable
+        if: matrix.platform == 'windows-latest'
+        shell: pwsh
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tagName: v__VERSION__
-          releaseName: "DevEnv Manager v__VERSION__"
-          releaseBody: "See the assets below to download and install this version."
-          releaseDraft: true
-          prerelease: false
-          args: --no-bundle
-          uploadPlainBinary: true
-          assetNamePattern: "[name]_[version]_x64-portable[ext]"
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          $version = (Get-Content package.json | ConvertFrom-Json).version
+          $assetName = "devenv-manager_${version}_x64-portable.exe"
+          gh release upload "v$version" "src-tauri/target/release/devenv-manager.exe#$assetName" --clobber
