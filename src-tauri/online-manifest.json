@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-05T06:54:06.289Z",
+  "repository": "devenv-manager-remote-data",
+  "datasets": [
+    {
+      "id": "environmentTools",
+      "path": "data/environment-tools.json",
+      "schema": "schemas/environment-tools.schema.json",
+      "bytes": 12211,
+      "sha256": "3a882b406ecbb21dd4e80225f19b0fbd531be496f6073842ea30dd498b8ec328"
+    },
+    {
+      "id": "catalogTools",
+      "path": "data/catalog-tools.json",
+      "schema": "schemas/catalog-tools.schema.json",
+      "bytes": 489623,
+      "sha256": "35b95b01e28c2cbea5db68049a1aa992b39b011bc536d15be14b0949570e8299"
+    },
+    {
+      "id": "identities",
+      "path": "data/identities.json",
+      "schema": null,
+      "bytes": 82338,
+      "sha256": "1e54472d8c19649a83878520cdf8dd2ee17835a20d618f74e92e0e52f6603f5a"
+    },
+    {
+      "id": "scanRules",
+      "path": "data/scan-rules.json",
+      "schema": "schemas/scan-rules.schema.json",
+      "bytes": 19344,
+      "sha256": "1d7820be42b390e522662a32486d887820251bb114731cfea4a419b926860354"
+    },
+    {
+      "id": "toolRequests",
+      "path": "data/tool-requests.json",
+      "schema": null,
+      "bytes": 44,
+      "sha256": "7b39bda2509dbbb8e27ac4f4a8607b7d0b4f104cea0997fba04dceb628d03ec8"
+    },
+    {
+      "id": "installVersions",
+      "path": "data/online/install-versions.json",
+      "schema": "schemas/install-versions.schema.json",
+      "bytes": 6054874,
+      "sha256": "729f795cc1fc4ece51968ef6f58bd0bee828206d602885b758d57f405957fa05"
+    },
+    {
+      "id": "splitIndex",
+      "path": "data/online/index.json",
+      "schema": null,
+      "bytes": 50006,
+      "sha256": "768006f1d206eb71d30487b45a04e4a5edfd74e5fdee5182e0c72c77df5defad"
+    },
+    {
+      "id": "splitTools",
+      "path": "data/online/tools",
+      "schema": null,
+      "type": "directory",
+      "bytes": 5700944,
+      "fileCount": 133,
+      "sha256": "e256df4377b5ecf0cb23693a312da78d52cbc50b8527ca7f5f988fcc6b7b8f6d"
+    },
+    {
+      "id": "sourcePolicy",
+      "path": "data/online/source-policy.json",
+      "schema": null,
+      "bytes": 1620,
+      "sha256": "94a7381c14083e00fb873d9b9109d6545946605069a938bb1dee14f7106501b8"
+    },
+    {
+      "id": "delta",
+      "path": "data/online/delta.json",
+      "schema": null,
+      "bytes": 559,
+      "sha256": "807c39cb54626b0fd81c5c92dd32f5e1e58da301994f6bd8b19a6157f1d02095"
+    }
+  ]
+}
