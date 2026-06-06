@@ -77,4 +77,4 @@ jobs:
           prerelease: false
           args: --no-bundle
           uploadPlainBinary: true
-          releaseAssetNamePattern: "[name]_[version]_x64-portable[ext]"
+          assetNamePattern: "[name]_[version]_x64-portable[ext]"
